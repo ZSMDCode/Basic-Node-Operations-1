@@ -1,0 +1,22 @@
+1. 
+'Sort commands.js' outputted the file and then sorted each line alphabetically by the first character
+'wc commands.js' outputted 40, 101, 1052 which are the numbers of lines, words, and characters in the file.
+'uniq commands.js' outputted the file and did not remove any lines since they are all unique.
+
+2. 
+I used `uniq commands.js | wc' as the pipeline to see if it changed and it actually outputted 41, 101, and 1053 which
+means there is one new line and one new character. This is due to the new line being counted and also the new line
+also counts for one more character. 
+
+6.
+var reverseString = (string) => {
+   var words = string.split(' ');
+   var result = [];
+   for(var i = 0; i < words.length; i ++){
+     result.push(words[i].split('').reverse().join(''));
+   }  
+   return result.join(' ');
+}
+
+
+console.log(reverseString("Hello my name is Thomas"));
